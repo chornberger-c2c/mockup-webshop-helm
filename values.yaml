@@ -12,8 +12,11 @@ service:
 resources: {}
 
 ingress:
-  enabled: false
-  # host: webshop.local
-  # annotations: {}
-  # tls: []
-
+  enabled: true
+  className: nginx
+  hosts:
+    - host: shop.localdomain
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []  # add certs here if needed
