@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/chornberger-c2c/mockup-webshop
-  tag: "1.0.0"
+  tag: "1.1.3"
   pullPolicy: IfNotPresent
 
 service:
