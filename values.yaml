@@ -24,11 +24,11 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-  tls: []
-  # tls:
-  #   - hosts:
-  #       - shop.herrhornberger.de
-  #     secretName: shop-tls
+  #tls: []
+  tls:
+    - hosts:
+        - shop.herrhornberger.de
+      secretName: shop-tls
 
 autoscaling:
   enabled: true

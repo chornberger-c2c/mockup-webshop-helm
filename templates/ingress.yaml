@@ -5,6 +5,7 @@ metadata:
   name: {{ include "mockup-webshop.fullname" . }}
   annotations:
     kubernetes.io/ingress.class: {{ .Values.ingress.className | quote }}
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
   rules:
     {{- range .Values.ingress.hosts }}
