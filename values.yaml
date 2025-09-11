@@ -17,16 +17,18 @@ resources:
     cpu: 250m
     memory: 256Mi
 
-
 ingress:
   enabled: true
-  className: nginx
   hosts:
-    - host: shop.localdomain
+    - host: shop.herrhornberger.de
       paths:
         - path: /
           pathType: Prefix
   tls: []
+  # tls:
+  #   - hosts:
+  #       - shop.herrhornberger.de
+  #     secretName: shop-tls
 
 autoscaling:
   enabled: true
