@@ -27,10 +27,7 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-  tls:
-    - hosts:
-        - shop.herrhornberger.de
-      secretName: shop-tls
+  tls: []
 
 autoscaling:
   enabled: true
