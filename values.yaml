@@ -19,6 +19,7 @@ resources:
 
 ingress:
   enabled: true
+  className: nginx
   hosts:
     - host: shop.herrhornberger.de
       paths:
