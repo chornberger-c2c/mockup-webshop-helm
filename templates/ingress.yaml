@@ -25,7 +25,7 @@ spec:
             pathType: {{ .pathType | default "Prefix" }}
             backend:
               service:
-                name: {{ include "mockup-webshop.fullname" $. }}
+                name: {{ include "mockup-webshop.fullname" . }}
                 port:
                   number: {{ $.Values.service.port }}
           {{- end }}
