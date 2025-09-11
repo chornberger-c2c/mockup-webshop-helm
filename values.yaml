@@ -35,19 +35,22 @@ ingress:
 autoscaling:
   enabled: true
   minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 10
+  maxReplicas: 20
+  targetCPUUtilizationPercentage: 5
   behavior:
     scaleUp:
       stabilizationWindowSeconds: 0
       policies:
+        - type: Pods
+          value: 5
+          periodSeconds: 5
         - type: Percent
-          value: 100
-          periodSeconds: 15
+          value: 200
+          periodSeconds: 5
     scaleDown:
-      stabilizationWindowSeconds: 30
+      stabilizationWindowSeconds: 10
       policies:
         - type: Percent
           value: 100
-          periodSeconds: 15
+          periodSeconds: 10
 
