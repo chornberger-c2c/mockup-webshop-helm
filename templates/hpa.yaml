@@ -3,7 +3,6 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "mockup-webshop.fullname" . }}
-  namespace: {{ .Values.namespace | default .Release.Namespace }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
