@@ -9,12 +9,11 @@ service:
 
 resources:
   requests:
-    cpu: 25m
-    memory: 128Mi
+    cpu: "200m"
+    memory: "256Mi"
   limits:
-    cpu: 500m
-    memory: 256Mi
-
+    cpu: "500m"
+    memory: "512Mi"
 
 ingress:
   enabled: true
