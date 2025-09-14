@@ -9,7 +9,7 @@ service:
 
 resources:
   requests:
-    cpu: 100m
+    cpu: 25m
     memory: 128Mi
   limits:
     cpu: 500m
@@ -41,10 +41,10 @@ autoscaling:
       stabilizationWindowSeconds: 0
       policies:
         - type: Pods
-          value: 5
+          value: 10
           periodSeconds: 5
         - type: Percent
-          value: 200
+          value: 300
           periodSeconds: 5
     scaleDown:
       stabilizationWindowSeconds: 10
