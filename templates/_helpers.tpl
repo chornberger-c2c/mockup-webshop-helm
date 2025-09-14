@@ -1,5 +1,5 @@
 {{- define "mockup-webshop.name" -}}
-mockup-webshop
+grs-webshop
 {{- end -}}
 
 {{- define "mockup-webshop.fullname" -}}
