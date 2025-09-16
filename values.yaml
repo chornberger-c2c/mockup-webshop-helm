@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/chornberger-c2c/mockup-webshop
-  tag: ""
+  tag: "1.4.0"
   pullPolicy: IfNotPresent
 
 service:
